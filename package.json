@@ -1,0 +1,32 @@
+{
+  "name": "koa-simple-app",
+  "version": "1.0.0",
+  "description": "Educational project for RIA developers school 2022",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/Ghost-VN/koa-simple-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ghost-VN/koa-simple-app/issues"
+  },
+  "homepage": "https://github.com/Ghost-VN/koa-simple-app#readme",
+  "dependencies": {
+    "config": "^3.3.7",
+    "koa": "^2.13.4",
+    "koa-body": "^4.2.0",
+    "koa-router": "^10.1.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.15.4",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}
