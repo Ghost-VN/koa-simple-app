@@ -1,14 +1,25 @@
 const Router = require('koa-router');
 
-const routesPrivate = new Router();
+const privateRoutes = new Router();
+const publicRoutes = new Router();
 
 const service = require('../controllers/service');
+const adverts = require('../controllers/adverts');
+const users = require('../controllers/users');
 
-routesPrivate
+publicRoutes
+  .prefix('/public')
+  .get('/adverts', adverts.get)
+  .get('/users', users.get);
+
+privateRoutes
   .get('/about', service.about);
 
 module.exports = {
-  routesPrivate() {
-    return routesPrivate.routes();
+  privateRoutes() {
+    return privateRoutes.routes();
+  },
+  publicRoutes() {
+    return publicRoutes.routes();
   },
 };

@@ -4,7 +4,8 @@
   "description": "Educational project for RIA developers school 2022",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint": "npx eslint ./"
   },
   "repository": {
     "type": "git",
