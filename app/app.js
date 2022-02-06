@@ -1,4 +1,5 @@
 const Koa = require('koa');
+const config = require('config');
 
 const { privateRoutes, publicRoutes } = require('./routes/index');
 
@@ -21,14 +22,7 @@ app.use(async (ctx, next) => {
     ctx.set('X-Response-Time', `${duration} ms.`)
 });
 
-app.use(async (ctx, next) => {
-    if (ctx.status === 404)
-    ctx.body = {
-       message: `route < ${ctx.url} > not found`
-    };
-    await next();
-});
-
-app.listen(9999, () =>
-  console.log('server start at -> http://127.0.0.1:9999')
+const {port} = config.server;
+app.listen(port, () =>
+  console.log(`server start at -> http://127.0.0.1:${port}`)
 );

@@ -6,4 +6,7 @@ module.exports = {
     version: pkg.version,
     description: pkg.description,
   },
+  server: {
+    port: process.env.SERVER_PORT,
+  },
 };
